@@ -6,7 +6,7 @@ public class Produto {
     private String tipo;
     private String descricao;
     private double valorCompra;
-    private double valorVenda;
+    private double Valor_venda;
     private int quantidadeEstoque;
     private boolean codStatus;
 
@@ -51,11 +51,11 @@ public class Produto {
     }
 
     public double getValorVenda() {
-        return valorVenda;
+        return Valor_venda;
     }
 
     public void setValorVenda(double valorVenda) {
-        this.valorVenda = valorVenda;
+        this.Valor_venda = valorVenda;
     }
 
     public int getQuantidadeEstoque() {

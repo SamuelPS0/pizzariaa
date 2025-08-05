@@ -1,4 +1,4 @@
-ackage com.itb.inf2am.pizzariaa.controller;
+package com.itb.inf2am.pizzariaa.controller;
 
 
 import com.itb.inf2am.pizzariaa.model.entity.Categoria;

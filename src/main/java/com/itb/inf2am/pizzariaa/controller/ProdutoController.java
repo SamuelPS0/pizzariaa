@@ -35,13 +35,13 @@ public class ProdutoController {
         Produto p1 = new Produto();
         p1.setNome("Pizza de Calabreso");
         p1.setDescricao("Pizza com muito calabreso acebolado");
-        p1.setValor_venda(49.50);
+
 
 
         Produto p2 = new Produto();
         p2.setNome("Pizza de Muçarela");
         p2.setDescricao("Pizza com muito queijo muçarela");
-        p2.setValor_venda(46.50);
+
 
 
         // Adicionando o produto
