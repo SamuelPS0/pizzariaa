@@ -1,10 +1,49 @@
 package com.itb.inf2am.pizzariaa.model.entity;
 
-public class Telefone{
-    private long id;
-    private int ddd;
-    private int numero;
-    private long cliente_id;
-    private boolean cod_status;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "Telefone")
+public class Telefone {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column(length = 3, nullable = false)
+    private String ddd;
+    @Column(length = 15, nullable = false)
+    private String numero;
+    private boolean codStatus;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDdd() {
+        return ddd;
+    }
+
+    public void setDdd(String ddd) {
+        this.ddd = ddd;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public boolean isCodStatus() {
+        return codStatus;
+    }
+
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
+    }
 }

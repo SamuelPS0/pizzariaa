@@ -1,15 +1,25 @@
 package com.itb.inf2am.pizzariaa.model.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
 public class Pedido {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(columnDefinition = "DECIMAL (5,2)", nullable = false)
     private int valorPedido;
+    @Column(nullable = false)
     private LocalDateTime dataHoraPedido;
+    @Column(nullable = true)
     private LocalDateTime dataHoraEntrega;
+    @Column(length = 20, nullable = false)
     private boolean status;
     private long codStatus;
-    private long clienteId;
 
     public long getId() {
         return id;
@@ -59,11 +69,4 @@ public class Pedido {
         this.codStatus = codStatus;
     }
 
-    public long getClienteId() {
-        return clienteId;
-    }
-
-    public void setClienteId(long clienteId) {
-        this.clienteId = clienteId;
-    }
 }

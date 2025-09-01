@@ -1,9 +1,22 @@
 package com.itb.inf2am.pizzariaa.model.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table (name = "Categoria")
 public class Categoria {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Auto-incremento
     private long id;
+
+    @Column(length = 45, nullable = false)
     private String nome;
+
+    @Column(length = 225)
     private String descricao;
+
+
     private boolean codStatus;
 
     public long getId() {
